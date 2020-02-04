@@ -1,4 +1,4 @@
-#<a name="hoffman">Using Hoffman </a>
+# <a name="hoffman">Using Hoffman </a>
 
 ## Table of contents
 1. [Interactive Session](#qrsh)
@@ -7,7 +7,7 @@
 4. [Job Array](#jobarray)
 
 
-###<a name ="qrsh">Interactive Session</a>
+### <a name ="qrsh">Interactive Session</a>
 
 If you want to run everything live in the terminal, you want an interactive session. This is nice when you have an environment you set up and you want to see if things work now. There is no waiting for the job to run like when you submit a job on hoffman2. 
 
@@ -36,7 +36,7 @@ qrsh -l h_rt=8:00:00,h_data=4G,highp
  
 
 
-###<a name ="qsub">Submit a Job</a>
+### <a name ="qsub">Submit a Job</a>
 
 
 If you need to run a job for a long time and you don't want to wait for an interative session, you can submit a job. There are multiple parameters you can set to get what you want. For example, you may want to receive an email when the job starts or stops or fails.
@@ -68,7 +68,7 @@ my-script.py argument1 argument2
 ```
 
 
-###<a name ="miscellaneous">Miscellaneous Skills</a>
+### <a name ="miscellaneous">Miscellaneous Skills</a>
 
 **Check sob status for all your jobs**
 
@@ -89,11 +89,11 @@ qstat -j <i>jobid</i>
 myquota -u username
 ```		
 
-###<a name ="jobarray">Running a job array or Batch job</a>
+### <a name ="jobarray">Running a job array or Batch job</a>
 
 Sometimes you want to do the same task to 1000 different files with the same parameters or different parameters. You want it to happen fast. Turns out you can submit 1 job that will release 1000 tasks nearly simultaneously so that you can have several 100 jobs running at the same time. This can turn a 1000 minute task into a 2 minute task. 
  
-####Step 1: Prepare command parameters files. Each "job" needs it's own file that contains the parameters
+#### Step 1: Prepare command parameters files. Each "job" needs it's own file that contains the parameters
 
 Each parameters should be named with a number that represents a job number between 1 and the number of jobs you want to run. For example, data1.in, data2.in, data3.in.
 
@@ -160,7 +160,7 @@ while read -r arg_1 arg_2 arg_3; do
 done < PARAMS/data$SGE_TASK_ID.in
 ```
 
-####Step 3: Submit the job array
+#### Step 3: Submit the job array
 
 Running jobs 1 to 10 I indicate the job numbers (which match the parameter file numbers) with ```-t lower-upper:interval```
 
