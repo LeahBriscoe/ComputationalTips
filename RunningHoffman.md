@@ -46,7 +46,7 @@ First step to a job, you need to write a bash script to run the job. Bash script
 
 [Guidelines](https://www.ccn.ucla.edu/wiki/index.php/Hoffman2:Submitting_Jobs)
 
-Example: ```cwd``` means I want to run the job from the directory I am currently submitting it from. ```-M``` means I want to receive an email to the email registered to my username. Replace 'yourusername' with your hoffman2 username. ```-m beas``` defined when I want to be emailed: if the job **b**egins, if the job **e**nds. Check out the other parameters at [Hoffman2 wiki](https://www.ccn.ucla.edu/wiki/index.php/Hoffman2:Submitting_Jobs)
+Example: ```cwd``` means I want to run the job from the directory I am currently submitting it from. ```-M``` means I want to receive an email to the email registered to my username. Replace 'yourusername' with your hoffman2 username. ```-m beas``` defined when I want to be emailed: if the job **b**egins, if the job **e**nds. ```-N``` designates what i am naming this job like 'Dump1_5'. Check out the other parameters at [Hoffman2 wiki](https://www.ccn.ucla.edu/wiki/index.php/Hoffman2:Submitting_Jobs)
 
 
 ```{bash}
